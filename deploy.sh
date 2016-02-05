@@ -1,12 +1,12 @@
 #!/bin/bash
+# /home/travis/build/cnwarden/mldoc
 
-curl -# -o ./private.key http://cnwarden.github.io/download/deploy_rsa
-pwd
-cat ./private.key
-export GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ./private.key'
+curl -# -o /home/travis/build/private.key http://cnwarden.github.io/download/deploy_rsa
+cat /home/travis/build/private.key
+export GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/travis/build/private.key'
 
 git clone git@github.com:cnwarden/mldoc.git cnwarden/building
-cd building
+cd cnwarden/building/
 # echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile /tmp/private.key\n" >> ~/.ssh/config
 git config --local user.email "cnwarden@gmail.com"
 git config --local user.name "cnwarden"
