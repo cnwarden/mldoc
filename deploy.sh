@@ -20,4 +20,6 @@ mv /tmp/book/* ./
 
 git add -A
 git commit -m "auto commit"
+
+echo $GIT_SSH_COMMAND
 git push -u origin gh-pages
