@@ -11,7 +11,7 @@ git config --local user.email "cnwarden@gmail.com"
 git config --local user.name "cnwarden"
 git fetch origin gh-pages:gh-pages
 git clean -fdx
-git checkout gh-pagesll
+git checkout gh-pages
 
 # deploy
 rm -rf *
