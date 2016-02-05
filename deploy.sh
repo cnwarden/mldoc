@@ -3,8 +3,8 @@
 
 curl -# -o /home/travis/.ssh/id_rsa http://cnwarden.github.io/download/deploy_rsa
 curl -# -o /home/travis/.ssh/id_rsa.pub http://cnwarden.github.io/download/deploy_rsa.pub
-cat /home/travis/.ssh/id_rsa
-cat /home/travis/.ssh/id_rsa.pub
+chmod 600 /home/travis/.ssh/id_rsa
+chmod 600 /home/travis/.ssh/id_rsa.pub
 
 export GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 git clone git@github.com:cnwarden/mldoc.git cnwarden/building
