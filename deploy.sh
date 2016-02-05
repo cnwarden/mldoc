@@ -13,6 +13,8 @@ git config --local user.name "cnwarden"
 git config --global push.default simple
 git remote set-url origin git@github.com:cnwarden/mldoc.git
 
+cat .git/config
+
 git fetch origin gh-pages:gh-pages
 git clean -fdx
 git checkout gh-pages
