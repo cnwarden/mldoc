@@ -13,7 +13,7 @@ addons:
     - gcc-4.8
     - g++-4.8
 script:
-- gitbook build src /tmp/_book
-- 
+- cp deploy.sh ~/
+- . ~/deploy.sh
 after_success:
 - echo Good Ending!
