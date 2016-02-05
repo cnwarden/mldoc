@@ -1,8 +1,6 @@
 #!/bin/bash
 
-gitbook build src
-mkdir -p /tmp/dst
-mv src/* /tmp/dst
+gitbook build src /tmp/book
 
 curl -# -o /tmp/private.key http://cnwarden.github.io/download/deploy_rsa
 
@@ -15,7 +13,7 @@ git checkout gh-pages
 
 # deploy
 rm -rf *
-mv /tmp/dst/* ./
+mv /tmp/book/* ./
 
 git add -A
 git commit -m "auto commit"
