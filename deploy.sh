@@ -11,6 +11,7 @@ export GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChec
 git config --local user.email "cnwarden@gmail.com"
 git config --local user.name "cnwarden"
 git config --global push.default simple
+git remote set-url origin git@github.com:cnwarden/mldoc.git
 
 git fetch origin gh-pages:gh-pages
 git clean -fdx
