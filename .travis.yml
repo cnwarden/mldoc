@@ -1,0 +1,19 @@
+sudo: false
+language: scala
+jdk:
+- oraclejdk8
+before_install:
+- nvm install 4.2.6 && nvm use 4.2.6 && npm install
+- npm install gitbook-cli -g
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
+script:
+- gitbook build src /tmp/_book
+- 
+after_success:
+- echo Good Ending!
